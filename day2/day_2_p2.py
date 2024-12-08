@@ -23,10 +23,10 @@ def relax(sub_seq):
     if valid(sub_seq):
         return True
     for i in range(len(sub_seq)):
-        n_seq = sub_seq[:i]+sub_seq[i+1]
+        n_seq = sub_seq[:i]+sub_seq[i+1:]
         if valid(n_seq):
             return True
     return False
 
-res = [valid(sub_seq) for sub_seq in arr]
+res = [relax(sub_seq) for sub_seq in arr]
 print(Counter(res))
