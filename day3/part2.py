@@ -9,5 +9,4 @@ matches = re.sub(r"don't.*?(?=\bdo\b|$)",'',raw,flags=re.DOTALL | re.IGNORECASE)
 
 mul_mat = re.findall(r"mul\((\d+),(\d+)\)",matches)
 
-res = [int(x)*int(y) for x,y in mul_mat]
-print(sum(res))
+print(sum([int(x)*int(y) for x,y in mul_mat]))
