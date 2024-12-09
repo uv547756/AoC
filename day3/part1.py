@@ -12,4 +12,5 @@ for line in raw:
     if match:
         mul_mat.extend(match)
 res = [int(x)*int(y) for x,y in mul_mat]
+print(mul_mat)
 print(sum(res))
